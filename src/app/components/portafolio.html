@@ -1,0 +1,504 @@
+<!-- =========================================================================
+     SECCIÓN: ENCABEZADO / NAVEGACIÓN
+     Descripción: Barra de navegación superior con logo y enlaces rápidos.
+     ========================================================================= -->
+<div class="contenedor-header">
+  <header>
+    <div class="logo">
+      <a href="#">Ing. David Nieto</a>
+    </div>
+
+    <nav id="nav" [class.active]="menuAbierto">
+      <ul style="list-style: none; display: flex; align-items: center;">
+        <li><a style="cursor: pointer" (click)="navegarA('inicio')">INICIO</a></li>
+        <li><a style="cursor: pointer" (click)="navegarA('sobremi')">SOBRE MI</a></li>
+        <li><a style="cursor: pointer" (click)="navegarA('skills')">SKILLS</a></li>
+        <li><a style="cursor: pointer" (click)="navegarA('curriculum')">CURRICULUM</a></li>
+        <li><a style="cursor: pointer" (click)="navegarA('portfolio')">PORTAFOLIO</a></li>
+        <li><a style="cursor: pointer" (click)="navegarA('contacto')">CONTACTO</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-responsive" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+</div>
+
+<!-- =========================================================================
+     SECCIÓN: INICIO / HERO SECTION
+     Descripción: Presentación principal, foto de perfil y redes sociales.
+     ========================================================================= -->
+<section id="inicio" class="inicio">
+    <div class="contenido-banner">
+        <div class="contenedor-img">
+            <img src="dnperfil.jpg" alt="Foto de Perfil de Ing. David Nieto">
+        </div>
+        <h1>Ing. David Nieto</h1>
+        <h2>Ingeniero de Software</h2>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/david-nieto-5b0012259" target="_blank" title="LinkedIn" aria-label="Visitar mi perfil de LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/IngenieroDorian27" target="_blank" title="GitHub" aria-label="Visitar mi perfil de GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:davy.nt89@gmail.com" title="Gmail" aria-label="Enviar un correo electrónico"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================================
+     SECCIÓN: SOBRE MÍ
+     Descripción: Información personal, intereses y enlace al CV.
+     ========================================================================= -->
+<section id="sobremi" class="sobremi">
+    <div class="contenido-seccion">
+        <h2>Sobre Mi</h2>
+        <p><span class="resaltado">Hola, soy David Nieto.</span> Ingeniero de Software con un enfoque sólido en el desarrollo de soluciones digitales innovadoras. Me defino como un profesional proactivo, comprometido con el aprendizaje continuo y la excelencia técnica. Poseo una alta capacidad de adaptación y trabajo en equipo, orientándome siempre a la resolución eficiente de problemas complejos y a la optimización de procesos tecnológicos.</p>
+            <div class="fila">
+
+                <!-- Datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            27-05-1989
+                        </li>
+                        <li>
+                            <strong>Telefono</strong>
+                            0983181864
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            davy.nt89@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            Próximamente
+                        </li>
+                        <li>
+                            <strong>Direccion</strong>
+                            Bastion Popular
+                        </li>
+                        <li>
+                            <strong>Perfil</strong>
+                            <span class="cargo-label">Desarrollador Full Stack</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes" title="Desarrollo Web, Frontend y Backend">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>WEB</span>
+                        </div>
+                        <div class="interes" title="Tecnología, Astronomía, Terror y Curiosidades">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LECTURA</span>
+                        </div>
+                        <div class="interes" title="Desarrollo de Software y Proyectos Personales">
+                            <i class="fa-solid fa-code"></i>
+                            <span>CODING</span>
+                        </div>
+                        <div class="interes" title="Ecosistema Android y Desarrollo Móvil">
+                            <i class="fa-brands fa-android"></i>
+                            <span>ANDROID</span>
+                        </div>
+                        <div class="interes" title="Vida Saludable">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>ENTRENAR</span>
+                        </div>
+                        <div class="interes" title="Coleccionismo de figuras, arte digital y cultura pop">
+                            <i class="fa-solid fa-gem"></i>
+                            <span>COLECCIONES</span>
+                        </div>
+                        <div class="interes" title="Shooters, carreras y gaming en Steam">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes" title="Rock, Metal y Románticas">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://drive.google.com/uc?export=download&id=1y_Qpsq4n00F4wBzysT23qPhOHOahUFsO" target="_blank" class="btn-cv" style="text-decoration: none; display: inline-block; text-align: center;">
+                    DESCARGAR CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </a>
+            </div>
+    </div>
+</section>
+
+
+<!-- =========================================================================
+     SECCIÓN: SKILLS
+     Descripción: Habilidades técnicas presentadas como un inventario profesional (Tech Stack).
+     ========================================================================= -->
+<section id="skills" class="skills">
+    <div class="contenido-seccion">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+            <!-- Lenguajes -->
+            <div class="skill-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Lenguajes</h3>
+                </div>
+                <div class="tech-badges">
+                    <span class="badge"><i class="fa-brands fa-java"></i> Java</span>
+                    <span class="badge"><i class="fa-solid fa-sharp-sign"></i> C#</span>
+                    <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="badge"><i class="fa-brands fa-ts"></i> TypeScript</span>
+                    <span class="badge"><i class="fa-solid fa-mobile-screen"></i> Kotlin</span>
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="skill-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3>Frameworks y Librerías</h3>
+                </div>
+                <div class="tech-badges">
+                    <span class="badge"><i class="fa-brands fa-angular"></i> Angular</span>
+                    <span class="badge"><i class="fa-brands fa-react"></i> React</span>
+                    <span class="badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                    <span class="badge"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+                    <span class="badge"><i class="fa-solid fa-server"></i> Express</span>
+                    <span class="badge"><i class="fa-solid fa-database"></i> EF Core</span>
+                    <span class="badge"><i class="fa-brands fa-microsoft"></i> .NET</span>
+                </div>
+            </div>
+
+            <!-- Base de Datos -->
+            <div class="skill-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Bases de Datos</h3>
+                </div>
+                <div class="tech-badges">
+                    <span class="badge"><i class="fa-solid fa-square-rss"></i> SQL Server</span>
+                    <span class="badge"><i class="fa-solid fa-elephant"></i> PostgreSQL</span>
+                    <span class="badge"><i class="fa-solid fa-circle-nodes"></i> MySQL</span>
+                    <span class="badge"><i class="fa-brands fa-google"></i> Firebase</span>
+                    <span class="badge"><i class="fa-solid fa-vault"></i> Oracle DB</span>
+                </div>
+            </div>
+
+            <!-- Despliegue -->
+            <div class="skill-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <h3>Despliegue y Herramientas</h3>
+                </div>
+                <div class="tech-badges">
+                    <span class="badge"><i class="fa-brands fa-aws"></i> AWS</span>
+                    <span class="badge"><i class="fa-brands fa-docker"></i> Docker</span>
+                    <span class="badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                    <span class="badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="soft-skills">
+            <h3>Habilidades Profesionales</h3>
+            <div class="soft-skills-grid">
+                <div class="soft-skill-item"><i class="fa-solid fa-comments"></i> Comunicación</div>
+                <div class="soft-skill-item"><i class="fa-solid fa-users"></i> Trabajo en Equipo</div>
+                <div class="soft-skill-item"><i class="fa-solid fa-lightbulb"></i> Creatividad</div>
+                <div class="soft-skill-item"><i class="fa-solid fa-heart"></i> Dedicación</div>
+                <div class="soft-skill-item"><i class="fa-solid fa-sync"></i> Metodologías Ágiles</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================================
+     SECCIÓN: TRAYECTORIA PROFESIONAL
+     Descripción: Línea de tiempo interactiva inspirada en el diseño previo, evolucionada a Deep Space AI.
+     ========================================================================= -->
+<section id="curriculum" class="trayectoria">
+    <div class="contenido-seccion">
+        <h2>Curriculum</h2>
+
+        <div class="timeline">
+            <!-- Hito 1: Educación -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 - 2026</div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>Ingeniero de Software</h3>
+                        <span class="institucion">Universidad de Guayaquil</span>
+                    </div>
+                    <p>Formación académica la integral en ingeniería de software, enfocada en la arquitectura de sistemas, calidad de software y desarrollo avanzado. Actualmente en trámite de titulación (SENESCYT).</p>
+                    <div class="tech-badges">
+                        <span class="badge"><i class="fa-solid fa-certificate"></i> Graduado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hito 2: Experiencia Full Stack & AI -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Marzo 2026 - Agosto 2026</div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <i class="fa-solid fa-robot"></i>
+                        <h3>Desarrollador Full Stack & AI Models</h3>
+                        <span class="institucion">Universidad Bolivariana del Ecuador</span>
+                    </div>
+                    <p>Implementación técnica en el desarrollo de un <strong>Sistema Inteligente para la detección de anomalías visuales</strong>. Implementación de un ecosistema multiplataforma integrado con modelos de IA.</p>
+                    <ul class="logros">
+                        <li><strong>Servicios Backend Especializados:</strong> Desarrollo especializado para las interfaces móvil y web, optimizando la entrega de datos según la plataforma.</li>
+                        <li><strong>Frontend Multiplataforma:</strong> Desarrollo de App móvil en Kotlin y Panel Web en Angular.</li>
+                        <li><strong>Infraestructura:</strong> Gestión de datos con PostgreSQL y despliegue escalable en AWS.</li>
+                    </ul>
+                    <div class="tech-badges">
+                        <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="badge"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+                        <span class="badge"><i class="fa-brands fa-angular"></i> Angular</span>
+                        <span class="badge"><i class="fa-solid fa-mobile-screen"></i> Kotlin</span>
+                        <span class="badge"><i class="fa-brands fa-aws"></i> AWS</span>
+                        <span class="badge"><i class="fa-solid fa-elephant"></i> PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hito 3: Experiencia Backend -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Abril 2025 - Diciembre 2025</div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>Desarrollador Backend</h3>
+                        <span class="institucion">Distribuidora de Gas la Concordia</span>
+                    </div>
+                    <p>Desarrollo y optimización del <strong>Sistema de Inventario y Logística</strong>, transformando procesos manuales en una solución digital eficiente.</p>
+                    <ul class="logros">
+                        <li><strong>API Design:</strong> Diseño e implementación de una API RESTful robusta utilizando Node.js y Express.</li>
+                        <li><strong>Logística:</strong> Automatización de la gestión de inventarios y mejora en la trazabilidad de recursos.</li>
+                    </ul>
+                    <div class="tech-badges">
+                        <span class="badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                        <span class="badge"><i class="fa-solid fa-server"></i> Express</span>
+                        <span class="badge"><i class="fa-solid fa-gears"></i> REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================================
+     SECCIÓN: PORTAFOLIO
+     Descripción: Galería de proyectos destacados con enfoque técnico y profesional.
+     ========================================================================= -->
+<section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+        <h2>Portafolio</h2>
+        <div class="portfolio-grid">
+            <!-- Proyecto 1: PoolManager -->
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <div class="tech-placeholder">
+                        <div class="glow-effect"></div>
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div class="placeholder-badges">
+                            <i class="fa-brands fa-angular"></i>
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">PoolManager Hub</h3>
+                    <p class="project-description">
+                        Ecosistema digital diseñado para la gestión operativa de instalaciones acuáticas. Integra la administración de puntos de servicio con un sistema de control de usuarios en tiempo real, conectando la gestión web con la experiencia móvil.
+                    </p>
+                    <div class="project-tech">
+                        <span class="badge"><i class="fa-brands fa-angular"></i> Angular</span>
+                        <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="badge"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+                        <span class="badge"><i class="fa-brands fa-aws"></i> AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IngenieroDorian27/panelweb_administrativo" target="_blank" class="btn-github" aria-label="Ver el código fuente de PoolManager Hub en GitHub">
+                            <i class="fa-brands fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 2: ShIArvis -->
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <div class="tech-placeholder ai-placeholder">
+                        <div class="glow-effect"></div>
+                        <div class="scan-line"></div>
+                        <i class="fa-solid fa-brain"></i>
+                        <div class="placeholder-badges">
+                            <i class="fa-solid fa-microchip"></i>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">ShIArvis</h3>
+                    <p class="project-description">
+                        Sistema avanzado de visión artificial impulsado por VisionIA, un conjunto de tres modelos de IA especializados para la supervisión de entornos acuáticos. Emplea Deep Learning para la detección y análisis de anomalías visuales en tiempo real.
+                    </p>
+                    <div class="project-tech">
+                        <span class="badge"><i class="fa-solid fa-robot"></i> AI Models</span>
+                        <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="badge"><i class="fa-solid fa-mobile-screen"></i> Kotlin</span>
+                        <span class="badge"><i class="fa-brands fa-aws"></i> AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IngenieroDorian27/appmovil_deteccion" target="_blank" class="btn-github" aria-label="Ver el código fuente de ShIArvis en GitHub">
+                            <i class="fa-brands fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 3: DeviceDoctor -->
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <div class="tech-placeholder">
+                        <div class="glow-effect"></div>
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <div class="placeholder-badges">
+                            <i class="fa-brands fa-react"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">DeviceDoctor</h3>
+                    <p class="project-description">
+                        Plataforma de gestión de servicios técnicos diseñada para optimizar la comunicación entre el proveedor y el cliente. Implementa un flujo de seguimiento en tiempo real con acceso seguro y personalizado.
+                    </p>
+                    <div class="project-tech">
+                        <span class="badge"><i class="fa-brands fa-react"></i> React</span>
+                        <span class="badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                        <span class="badge"><i class="fa-solid fa-database"></i> MySQL</span>
+                        <span class="badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IngenieroDorian27/app_devicedoctor" target="_blank" class="btn-github" aria-label="Ver el código fuente de DeviceDoctor en GitHub">
+                            <i class="fa-brands fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 4: CinePass -->
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <div class="tech-placeholder">
+                        <div class="glow-effect"></div>
+                        <i class="fa-solid fa-ticket"></i>
+                        <div class="placeholder-badges">
+                            <i class="fa-brands fa-angular"></i>
+                            <i class="fa-brands fa-microsoft"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">CinePass</h3>
+                    <p class="project-description">
+                        Sistema integral de gestión de boletería cinematográfica con motor de reglas para descuentos dinámicos. Permite la reserva estratégica de asientos y la gestión de salas en tiempo real.
+                    </p>
+                    <div class="project-tech">
+                        <span class="badge"><i class="fa-brands fa-angular"></i> Angular</span>
+                        <span class="badge"><i class="fa-brands fa-microsoft"></i> .NET Core</span>
+                        <span class="badge"><i class="fa-solid fa-database"></i> SQL Server</span>
+                        <span class="badge"><i class="fa-solid fa-layer-group"></i> EF Core</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IngenieroDorian27/boletoscine" target="_blank" class="btn-github" aria-label="Ver el código fuente de CinePass en GitHub">
+                            <i class="fa-brands fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================================
+     SECCIÓN: CONTACTO
+     Descripción: Acceso directo a canales de comunicación profesionales.
+     ========================================================================= -->
+<section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+        <h2>Contacto</h2>
+        <p class="contacto-intro">Si tienes un proyecto en mente o buscas un perfil técnico para tu equipo, no dudes en contactarme. Estoy abierto a nuevas oportunidades y colaboraciones.</p>
+
+        <div class="contacto-grid">
+            <!-- Tarjeta WhatsApp -->
+            <a href="https://wa.me/593983181864?text=Hola%20David,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte" target="_blank" class="contacto-card whatsapp">
+                <div class="card-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="card-info">
+                    <h3>WhatsApp</h3>
+                    <p>Chat instantáneo</p>
+                </div>
+                <div class="card-action">
+                    <span>Escribir <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Tarjeta Email -->
+            <a href="mailto:davy.nt89@gmail.com" class="contacto-card email">
+                <div class="card-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Correo Electrónico</h3>
+                    <p>Consulta profesional</p>
+                </div>
+                <div class="card-action">
+                    <span>Enviar <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <div class="contacto-detalles">
+            <div class="detalle-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+593 983181864</span>
+            </div>
+            <div class="detalle-item">
+                <i class="fa-solid fa-at"></i>
+                <span>davy.nt89@gmail.com</span>
+            </div>
+            <div class="detalle-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Guayaquil, Ecuador</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================================
+     FOOTER
+     Descripción: Cierre del sitio con copyright y botón de retorno.
+     ========================================================================= -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; {{currentYear}} Ing. David Nieto. Todos los derechos reservados.</p>
+        <a href="#inicio" class="btn-arriba" title="Volver al inicio">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </div>
+</footer>
+
